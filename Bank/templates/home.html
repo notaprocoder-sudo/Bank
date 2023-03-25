@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid homec">
+    <img src="{% static 'img/Home_img.jpg' %}" alt="img" class="img">
+    <a href="{% url 'creds:login' %}" ><button type="button" class="Hlog" >Join Now!</button></a>
+</div>
+{% endblock %}

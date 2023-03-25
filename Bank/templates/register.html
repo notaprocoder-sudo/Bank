@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="regblk">
+<div class="container reg">
+		<h2 id="register">Register</h2>
+		<hr>
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+
+			<!-- Username -->
+			<div class="form-group">
+				<label for="username">Username:</label>
+				<input type="text" class="form-control  regdet" id="username" name="username">
+			</div>
+
+			<!-- Password -->
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="password" class="form-control  regdet" id="password" name="password">
+			</div>
+           <!-- Confirm Password -->
+			<div class="form-group">
+				<label for="cpassword">Confirm Password:</label>
+				<input type="password" class="form-control  regdet" id="cpassword" name="cpassword">
+			</div>
+            <!-- Register button -->
+			<input type="submit" class="btn btn-secondary"></input>
+			<!-- New user register link -->
+			<p class="exist">Existing user? <a href="{% url 'creds:login' %}" class="exist">Login here</a></p>
+		</form><br>
+		{% for msg in messages %}
+    	<h5 style="color:red; text-align: center;"> {{msg}}</h5>
+    	{% endfor %}
+	</div>
+	
+</div>
+
+
+{% endblock %}

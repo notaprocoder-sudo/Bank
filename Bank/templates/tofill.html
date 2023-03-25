@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="lsicon">
+           <h1>Login Successful</h1>
+            <img src="{% static 'img/LS.png' %}" alt="LS">
+            <h4>In order to avail our services and unlock your luxury, please fill the details by clicking below.</h4>
+            <a href="{% url 'Bankapp:AddDet' %}" class="btn btn-secondary">Add Details</a>
+    </div>
+</div>
+
+{% endblock %}

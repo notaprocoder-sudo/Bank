@@ -1,0 +1,33 @@
+{% load static %}
+<div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <a class="navbar-brand" href="{% url 'Bankapp:Homepage' %}"><img src="{% static 'img/nav_logo.png' %}" width="60px" height="60px"> Pheonix Banking</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'creds:login' %}">Login<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'creds:register' %}">Register</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Branches
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Ernakulam_district">Ernakulam</a>
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kottayam_district">Kottayam</a>
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thiruvananthapuram_district">Thiruvananthapuram</a>
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Thrissur_district">Thrissur</a>
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Kozhikode_district">Kozhikode</a>
+            
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </div>

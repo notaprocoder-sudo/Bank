@@ -1,0 +1,92 @@
+.homec{
+    position:relative;
+}
+.homec img{
+    width:100%;
+    height:89%;
+}
+.Hlog{
+    border-radius:20px;
+    background-color:#D1AE6E;
+    width:200px;
+    height:70px;
+    font-size:2rem;
+    font-family: serif;
+    font-weight: 300;
+    position:absolute;
+    top:65%;
+    left:25%;
+    transform:translate(-50%,50%);
+}
+
+h1, h2, label, p{
+    color:white;
+}
+
+#login, #register{
+    margin:auto;
+    width:fit-content;
+    margin-top:10px;
+    margin-bottom:-5px;
+}
+
+.logindet, .regdet{
+    width:250px;
+
+}
+.btn, .button{
+    background-color:#D1AE6E;
+    width:250px;
+    margin:auto;
+    color:black;
+    font-family: serif;
+    font-size:1.2rem;
+}
+.newreg, .exist{
+    margin-top:10px;
+    color:white;
+}
+.log{
+    border: 3px solid white;
+    border-radius:20px;
+    width:280px;
+    height:350px;
+    margin-top:175px;
+}
+.reg{
+    border: 3px solid white;
+    border-radius:20px;
+    width:280px;
+    height:440px;
+    margin-top:145px;
+    position : relative;
+}
+
+.loginblk, .regblk{
+     margin:auto;
+     width:700px;
+     height:500px;
+}
+
+.lsicon {
+    margin:auto;
+    text-align:center;
+}
+.acc{
+    margin-bottom:100px;
+}
+h4{
+    color:white;
+    margin-bottom:20px;
+}
+
+
+.form-group{
+    width:500px;
+    margin:auto;
+    margin-bottom:15px;
+}
+.age, .dob{
+    width:100px;
+}
+

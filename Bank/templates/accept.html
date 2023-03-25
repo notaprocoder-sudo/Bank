@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="lsicon">
+           <h1>Application Accepted</h1>
+            <img src="{% static 'img/accepted.png' %}" class="acc" alt="acc" width="150px" height="150px">
+            <h4>Return to <a href="{% url 'Bankapp:Homepage' %}" >homepage</a> for our services</h4>
+
+    </div>
+</div>
+
+{% endblock %}

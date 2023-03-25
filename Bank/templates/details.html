@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+  <form method="POST" action="" id="MemberForm" data-branches-url="{% url 'Bankapp:ajax_load_branches' %}" class="form-horizontal" role="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="detbuts">
+    <input type="submit" value="Submit" class="btn btn-secondary">
+    <a href="{% url 'creds:logout' %}" class="btn btn-secondary">Logout</a>
+  </div>
+  </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $("#id_District").change(function () {
+        const url = $("#MemberForm").attr("data-branches-url");  // get the url of the `load_branches` view
+        const districtId = $(this).val();  // get the selected district ID from the HTML input
+ 
+        $.ajax({                       // initialize an AJAX request
+            url: url,                    // set the url of the request (= /members/ajax/load-branches/ )
+            data: {
+                'district_id': districtId       // GET parameters
+            },
+            success: function (data) {   
+                $("#id_Branch").html(data); 
+            }
+        });
+ 
+    });
+</script>
+{% endblock %}
